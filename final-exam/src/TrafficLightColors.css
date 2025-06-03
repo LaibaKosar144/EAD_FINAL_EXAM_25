@@ -1,0 +1,42 @@
+.Outer-Box {
+    background-color: gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 50px auto;
+    border-radius: 8px;
+    width: 120px;
+    height:300px;
+    justify-content: space-around;
+
+
+    
+}
+
+
+.red-light {
+     background-color: red;
+     width : 75px;
+     height: 75px;
+     border-radius:45%;
+     
+     
+}
+
+.green-light{
+    background-color: green;
+    width : 75px;
+     height: 75px;
+     border-radius: 45%;
+
+}
+
+.yellow-light{
+    background-color: yellow;
+    width : 75px;
+     height: 75px;
+     border-radius: 45%;
+
+}
