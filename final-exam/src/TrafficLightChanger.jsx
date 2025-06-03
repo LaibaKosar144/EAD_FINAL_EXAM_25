@@ -9,25 +9,26 @@ const TrafficLightChanger = () => {
 
 
 
-    const {color,setColor} = useState('Red');
+    const [Color,setColor] = useState('red');
 
      {/*initially putting red as our state value because simulation starts with red */}
 
     useEffect(()=> {
         {/*this logis is necessary to make a certain light run for some specific seconds, then return its value so new one could be updated accordingly */}
-        const currentColor = setInterval(() => {
+        const timerID = setInterval(() => {
         setColor(Color => {
-        if (Color === 'Red') {
-          return 'Green'; {/*changing red to green as shown in simulation */}
-        } else if (prevLight === 'Green') {
-          return 'Yellow'; 
+        if (Color === 'red') {
+          return 'green'; {/*changing red to green as shown in simulation */}
+        } else if (Color === 'green') {
+          return 'yellow'; 
         } else { 
-          return 'Red'; 
+          return 'red'; 
         }
       });
-    }, 2000);
+    }, 3000);
+    {/* changing every 3 seconds */}
 
-     return () => clearInterval(intervalId);
+     return () => clearInterval(currentColor);
   }, []);
 
 
@@ -41,9 +42,9 @@ const TrafficLightChanger = () => {
         {/*1 div inside which we will have 3 lights, using static css file we created */}
         {/*providing css properties to each file */}
         <div className='Outer-Box'> 
-            <div className='red-light'> RED</div>
-            <div className='yellow-light' > YELLOW</div>
-            <div className='green-light'> GREEN </div>
+            <div className='red-light'> </div>
+            <div className='yellow-light' > ${} </div>
+            <div className='green-light'> ${} </div>
         </div> 
       
     </div>
